@@ -162,7 +162,7 @@ def find_files(desired_path=None):
             Path.home(),
             Path.home() / "Desktop",
             Path.home() / "Documents",
-            Path.home() / "C:\\Users\\Loke\\PycharmProjects\\pythonProject\\Ntw_programming"
+            Path.home() / "C:\\Users\\"
         ]
         for root in candidates:
             candidate = (root / path_str).resolve(strict=False)
@@ -331,9 +331,6 @@ def find_files(desired_path=None):
     deleted_files(new_files, mappen)
 
 
-# Hur fan skall jag köra argparse  eller sys.argv[] från terminalen om jag skall importera -
-# funktionen från en annan fil... ahhh, jaja, kör argparse från main filen bara.
-
 if __name__ == "__main__":
 
     description = '''This IDS is used to save a snapshot of files and folders in json format 
@@ -361,12 +358,6 @@ if __name__ == "__main__":
     if not pa.snapshot:
         find_files(pa.folder)
     else:
-        # test1 = "C:/Users/Loke/Desktop"
-        # test2 = "C:/Users/Loke/Desktop/IDS_Test"
         snapshot = Node(pa.root)
         snapshot.create_json_table()
         file_dumping(snapshot.json_data)
-
-# Ceasar cip. pos 21 eller ngt, XD
-# VI ANFALLER TIDIGT IMORGON!!
-# BRUCE WAYNE ÄR BATMAN!
